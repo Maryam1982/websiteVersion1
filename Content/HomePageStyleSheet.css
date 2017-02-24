@@ -1,0 +1,176 @@
+﻿body {
+    background-image:  url('../Images/TexturedBackground1.jpg');
+    color:black;
+    /*background-color:aquamarine;*/
+}
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------- Carousel Styling ------------------- */
+
+.carousel-inner {
+  border-radius: 15px;
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20%;
+  z-index: 10;
+  padding: 0 0 10px 25px;
+  text-align: center;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: center;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+
+.carousel{
+    visibility:visible;
+}
+
+
+.carousel-caption h3:first-child {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.carousel-caption h3:nth-child(2) {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.carousel-caption button {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+
+.main-container {
+  padding: 40px 15px;
+}
+.skyblue {
+	background-color: #22c8ff;
+}
+.deepskyblue {
+	background-color: #00bfff;
+}
+.darkerskyblue {
+	background-color: #00a6dd;
+}
+
+.carousel-caption h3,
+.carousel .icon-container,
+.carousel-caption button {
+	background-color: darkslategrey;
+    border-radius:2em;
+}
+.carousel-caption h3 {
+	font-size:20px;
+}
+.carousel .icon-container {
+	display: inline-block;
+	font-size: 25px;
+	line-height: 25px;
+	padding: 1em;
+	text-align: center;
+	
+	border-radius: 50%;
+}
+/*phone*/
+@media only screen and (max-width:580px)
+{
+    .carousel{
+        visibility:hidden;
+        height:0.5em;
+    }
+}
+/*tablet*/
+@media only screen and (min-width:581px) and (max-width:629px)
+{
+    .carousel{
+        visibility:visible;
+    }
+
+}
+@media only screen and (min-width:630px) and (max-width:991px)
+{
+    .carousel{
+        visibility:visible;
+       
+    }
+}
+
+.content-first{
+    background-color:cornflowerblue;
+    text-decoration-color:black;
+    text-align:right;
+    margin:5px;
+    box-sizing:content-box;
+    padding-right:10px;
+    /*width:22%;*/
+}
+.content-second{
+    background-color:aquamarine;
+    text-decoration-color:black;
+    text-align:right;
+    margin:5px;
+    box-sizing:content-box;
+    padding-right:10px;
+    /*width:22%;*/
+}
+.content-third{
+    background-color:darkcyan;
+    text-decoration-color:black;
+    text-align:right;
+    margin:5px;
+    box-sizing:content-box;
+    padding-right:10px;
+    /*width:22%;*/
+}
+.content-fourth{
+    background-color:darkturquoise;
+    text-decoration-color:black;
+    text-align:right;
+    margin:5px;
+    box-sizing:content-box;
+    padding-right:10px;
+    /*width:20%;*/
+ }
+div ul{
+    padding:5px;
+    padding-right:7px;
+}
+div li{
+    direction:rtl;
+}
+.place-holder{
+    display:block;
+    clear:both;
+    height:3em;
+}
+
+

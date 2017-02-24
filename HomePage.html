@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>خانه</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    
+    <link href="Content/sm-core-css.css" rel="stylesheet" type="text/css" />
+    <link href="Content/smartmenusCostumStyle.css" rel="stylesheet" type="text/css" />
+    <link href="Content/sm-blue/sm-blue.css" rel="stylesheet" type="text/css" />
+
+    <link href="Content/animate.css" rel="stylesheet" type="text/css"/>
+
+
+    <link href="Content/HomePageStyleSheet.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="Scripts/libs/jquery/jquery.js"></script>
+
+    <script type="text/javascript"  src="Scripts/bootstrap.js"></script>
+
+    <!-- SmartMenus jQuery plugin -->
+    <script type="text/javascript" src="Scripts/jquery.smartmenus.js"></script>
+
+    <script src="Scripts/CustomCarousel.js" type="text/javascript"></script>
+
+    <!-- SmartMenus jQuery init -->
+    <script type="text/javascript">
+	$(function() {
+		$('#main-menu').smartmenus({
+			subMenusSubOffsetX: 1,
+			subMenusSubOffsetY: -8
+		});
+	});
+	// SmartMenus mobile menu toggle button
+	$(function () {
+	    var $mainMenuState = $('#main-menu-state');
+	    if ($mainMenuState.length) {
+	        // animate mobile menu
+	        $mainMenuState.change(function (e) {
+	            var $menu = $('#main-menu');
+	            if (this.checked) {
+	                $menu.hide().slideDown(250, function () { $menu.css('display', ''); });
+	            } else {
+	                $menu.show().slideUp(250, function () { $menu.css('display', ''); });
+	            }
+	        });
+	        // hide mobile menu beforeunload
+	        $(window).bind('beforeunload unload', function () {
+	            if ($mainMenuState[0].checked) {
+	                $mainMenuState[0].click();
+	            }
+	        });
+	    }
+	});
+    </script>
+
+</head>
+<body>
+
+    <nav class="main-nav" role="navigation">
+
+        <h2 class="nav-brand"><a href="#">Brand</a></h2>
+
+        <!-- Menu definition -->
+        <ul id="main-menu" class="sm sm-blue">
+            <li ><a href="#">تماس با ما</a></li>
+            <li>
+                <a href="#">شرکت در یک نگاه</a>
+                <ul>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">اهداف شرکت</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">نمودار سازمانی</a></li>
+                </ul>
+            </li> 
+            <li>
+                <a href="#">پشتیبانی</a>
+                <ul>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">شبکه</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">نرم افزار</a></li>
+                </ul>
+            </li>
+            
+            <li>
+                <a href="#">مقالات و آموزش</a>
+               
+            </li>
+            <li>
+                <a href="#">محصولات</a>
+                <ul>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">سرور</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">سوئیچ</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">Passive تجهیزات</a></li>
+                </ul>
+            </li>
+            <li style="text-align:right;background-color:aquamarine">
+                <a href="#">خدمات نرم افزاری</a>
+                <ul>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">حضور و غیاب</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">BI</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">عملکرد پرسنل</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">CRM</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">اتوماسیون اداری</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">نرم افزار جامع تولید</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">ERP</a></li>
+                </ul>
+            </li>
+            <li style="text-align:right;background-color:aquamarine">
+                <a href="#">خدمات شبکه</a>
+                <ul>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">passive شبکه</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">و نحوه ارتباط سطح شبکه Active</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">مجازی سازی</a></li>
+                    <li style="text-align:right;background-color:aquamarine"><a href="#">امنیت شبکه</a></li>
+                </ul>
+            </li>
+            <li style="text-align:right;background-color:aquamarine"><a href="#">صفحه اصلی</a></li>
+        </ul>
+    </nav>
+  
+   <span style="display:block;clear:both;height:1em;"></span>
+
+    <div class="container ">
+
+        <div id="CarouselIntro" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#CarouselIntro" data-slide-to="0" class="active"></li>
+                <li data-target="#CarouselIntro" data-slide-to="1"></li>
+                <li data-target="#CarouselIntro" data-slide-to="2"></li>
+                <li data-target="#CarouselIntro" data-slide-to="3"></li>
+                <li data-target="#CarouselIntro" data-slide-to="4"></li>
+                <li data-target="#CarouselIntro" data-slide-to="5"></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item active" >
+                    <div class="carousel-caption">
+                        <h3 class="icon-container" data-animation="animated bounceInDown">
+                            <span class="glyphicon glyphicon-lamp"></span>
+                        </h3>
+                        <h3 data-animation="animated bounceInLeft">
+                            ... از نخستین گام
+                        </h3>
+                        <h3 data-animation="animated bounceInRight">
+                            ایده اولیه
+                        </h3>
+                    </div>
+                    <img src="Images/newIdeas1.jpg" alt="Idea" />
+                </div>
+                <div class="item" >
+                    <div class="carousel-caption">
+                        <h3 class="icon-container" data-animation="animated bounceInDown">
+                            <span class="glyphicon glyphicon-blackboard"></span>
+                        </h3>
+                        <h3 data-animation="animated bounceInUp">
+                            طراحی شبکه
+                        </h3>
+                    </div>
+                    <img src="Images/NetworkPlanning4.jpg" alt="Planning" />
+                </div>
+                <div class="item" >
+                    <div class="carousel-caption">
+                        <h3 class="icon-container" data-animation="animated zoomInLeft">
+                            <span class="glyphicon glyphicon-modal-window"></span>
+                        </h3>
+                        <h3 data-animation="animated flipInX">
+                            پیاده سازی
+                        </h3>
+                    </div>
+                    <img src="Images/NetworkImplementation3.jpg" alt="Implementation" />
+                </div>
+                <div class="item" >
+                    <div class="carousel-caption">
+                        <h3 class="icon-container" data-animation="animated zoomInLeft">
+                            <span class="glyphicon glyphicon-wrench"></span>
+                        </h3>
+                        <h3 data-animation="animated flipInX">
+                            نگهداری
+                        </h3>
+                    </div>
+                    <img src="Images/eidted-Maintenance.jpg" alt="Maintenance" />
+                </div>
+                <div class="item" >
+                    <div class="carousel-caption">
+                        <h3 class="icon-container" data-animation="animated zoomInLeft">
+                            <span class="glyphicon glyphicon-sunglasses"></span>
+                        </h3>
+                        <h3 data-animation="animated flipInX">
+                            امنیت شبکه
+                        </h3>
+                    </div>
+                    <img src="Images/networkSecurity4.jpg" alt="Implementation" />
+                </div>
+                <div class="item" >
+                    <div class="carousel-caption">
+                        <h3 class="icon-container" data-animation="animated zoomInLeft">
+                            <span class="glyphicon glyphicon-sunglasses"></span>
+                        </h3>
+                        <h3 data-animation="animated flipInX">
+                            تا پایان...
+                        </h3>
+                        <h3 data-animation="animated zoomInLeft">
+                            !همراه شما خواهیم بود
+                        </h3>
+                    </div>
+                    <img src="Images/Final-Piece.jpg" alt="Implementation" />
+                </div>
+            </div>
+
+            <a class="left carousel-control" href="#CarouselIntro" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">قبل</span>
+            </a>
+
+            <a class="right carousel-control" href="#CarouselIntro" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">بعد</span>
+            </a>
+
+
+        </div>
+
+    </div>
+
+
+
+    <span style="display:block;height:1.5em;"></span>
+    <div class="container">
+        <div class="row">
+            <div class="  col-xs-12 col-sm-6 col-md-3" >
+                <div id="firstColumn" class="inview  animated bounce content-first">
+                    <h3>خدمات شبکه</h3>
+                    <h4>پسیو شبکه</h4>
+                    <ul>
+                        <li>نصب داکت</li>
+                        <li>کابل کشی شبکه</li>
+                        <li>مستند سازی شبکه</li>
+                        <li>نقشه لی اوت شبکه</li>
+                        <li>نقشه منطقی شبکه</li>
+                        <li>دیتا سنتر</li>
+                        <li>...</li>
+                    </ul>
+                </div>
+            </div>
+            <div  class="  col-xs-12 col-sm-6 col-md-3" >
+                <div id="secondColumn" class="inview bounce content-second">
+                    <h3>خدمات شبکه</h3>
+                    <h4>اکتیو شبکه</h4>
+                    <ul>
+                        <li>اکتیو دایرکتوری</li>
+                        <li>سرور و آی پی اتوماتیک DHCP</li>
+                        <li>ریموت سرور</li>
+                        <li>پالسی های اعمال شده در شبکه</li>
+                        <li>...</li>
+                        <li>...</li>
+                        <li>...</li>
+                    </ul>
+                    <!--<span class="place-holder"></span>-->
+                </div>
+            </div>
+            <div class="  col-xs-12 col-sm-6 col-md-3">
+                <div id="thirdColumn" class="inview animated bounce content-third">
+                    <h3>خدمات شبکه</h3>
+                    <h4>اکتیو شبکه</h4>
+                    <ul>
+                        <li>سرورهای مجازی</li>
+                        <li>زیرو کلاینت و حذف کیس</li>
+                        <li>...</li>
+                        <li>...</li>
+                        <li>...</li>
+                        <li>...</li>
+                        <li>...</li>
+                    </ul>
+                    <!--<span class="place-holder"></span>-->
+                </div>   
+            </div>
+            
+            <div class="  col-xs-12 col-sm-6 col-md-3 ">
+                <div id="fourthColumn" class="inview animated bounce content-fourth">
+                    <h3>خدمات شبکه</h3>
+                    <h4>خدمات نرم افزار</h4>
+                    <ul>
+                        <li>حضور و غیاب</li>
+                        <li>عملکرد پرسنل</li>
+                        <li>اتوماسیون اداری</li>
+                        <li>BI</li>
+                        <li>CRM</li>
+                        <li>نرم افزار جامع تولید</li>
+                        <li>ERP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="js/demo.js"></script>
+    <script src="Scripts/viewDetect.js"></script>
+    <script>
+        $(function () {
+
+            $('#firstColumn.inview').bind('inview', function (event, visible) {
+                if (visible) {
+                    $(this).addClass('animated bounce');
+                } else {
+                    $(this).removeClass('animated bounce');
+                }
+            });
+            
+            $('#secondColumn.inview').bind('inview', function (event, visible) {
+                if (visible) {
+                    setTimeout(function () {
+                        $('#secondColumn').addClass('animated bounce');
+                    }, 100);
+                } else {
+                    $(this).removeClass('animated bounce');
+                }
+            });
+
+            $('#thirdColumn.inview').bind('inview', function (event, visible) {
+                if (visible) {
+                    setTimeout(function () {
+                        $('#thirdColumn').addClass('animated bounce');
+                    }, 200);
+                } else {
+                    $(this).removeClass('animated bounce');
+                }
+            });
+
+            $('#fourthColumn.inview').bind('inview', function (event, visible) {
+                if (visible) {
+                    setTimeout(function () {
+                        $('#fourthColumn').addClass('animated bounce');
+                    }, 300);
+                } else {
+                    $(this).removeClass('animated bounce');
+                }
+            });
+        });
+    </script>
+
+    
+<footer >
+    <img src="Images/networkFooter2.jpg" class="img-responsive" />
+</footer>
+</body>
+
+</html>
+
