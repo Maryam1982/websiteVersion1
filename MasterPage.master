@@ -4,22 +4,137 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>test</title>
+    <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
-        <link href="Content/bootstrap-theme.css" rel="stylesheet" /> 
-        <link href="Content/bootstrap.css" rel="stylesheet" />
+        
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+        <header>
+            <link href="Content/bootstrap-theme.css" rel="stylesheet" /> 
+            <link href="Content/bootstrap.css" rel="stylesheet" />
+            <link href="Content/organizationChartStyle.css" rel="stylesheet" />
+            <link href="Content/sm-core-css.css" rel="stylesheet" type="text/css" />
+            <link href="Content/smartmenusCostumStyle.css" rel="stylesheet" type="text/css" />
+            <link href="Content/sm-blue/sm-blue.css" rel="stylesheet" type="text/css" />
+            <link href="Content/generalStyle.css" rel="stylesheet" />
+            <link href="Content/HomePageStyleSheet.css" rel="stylesheet" />
+               
+<nav class="main-nav" role="navigation">
+
+        <h2 class="nav-brand"><a href="#">Brand</a></h2>
+        <%--<span class="main-menu-btn" id="menuButton"></span>--%>
+
+        <!-- Menu definition -->
+        <ul id="main-menu" class="sm sm-blue sm-rtl">
+            
+            <li><a href="HomePage.html" id="mainPagelnk">صفحه اصلی</a></li>
+            <li >
+                <a href="#"; id="networkServicelnk">خدمات شبکه</a>
+                <ul>
+                    <li ><a href="#">passive شبکه</a></li>
+                    <li ><a href="#">و نحوه ارتباط سطح شبکه Active</a></li>
+                    <li ><a href="#">مجازی سازی</a></li>
+                    <li ><a href="#">امنیت شبکه</a></li>
+                </ul>
+            </li>
+            <li >
+                <a href="#"; id="softwareServicelnk">خدمات نرم افزاری</a>
+                <ul>
+                    <li ><a href="#">حضور و غیاب</a></li>
+                    <li ><a href="#">BI</a></li>
+                    <li ><a href="#">عملکرد پرسنل</a></li>
+                    <li ><a href="#">CRM</a></li>
+                    <li ><a href="#">اتوماسیون اداری</a></li>
+                    <li ><a href="#">نرم افزار جامع تولید</a></li>
+                    <li ><a href="#">ERP</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"; id="productslnk">محصولات</a>
+                <ul>
+                    <li ><a href="#">سرور</a></li>
+                    <li ><a href="#">سوئیچ</a></li>
+                    <li ><a href="#">Passive تجهیزات</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"; id="learninglnk">مقالات و آموزش</a>
+
+            </li>
+            <li>
+                <a href="#"; id="supportlnk">پشتیبانی</a>
+                <ul>
+                    <li ><a href="#">شبکه</a></li>
+                    <li ><a href="#">نرم افزار</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"; id="overviewlnk">شرکت در یک نگاه</a>
+                <ul>
+                    <li ><a href="#">اهداف شرکت</a></li>
+                    <li ><a href="organizationalChart.aspx">نمودار سازمانی</a></li>
+                </ul>
+            </li>
+            <li ><a href="#"; id="contactUslnk">تماس با ما</a></li> 
+            <li><a href="aboutUs.aspx"; id="aboutUslnk">درباره ما</a></li>
+        </ul>
+    </nav>
+    <span style="display:block;height:5em;">  </span>
+            <%--<img src="Images/header1.jpg"  class="img-responsive"/>--%>
+        </header>
     <div>
-        
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
       
         </asp:ContentPlaceHolder>
     </div>
+        
+            <footer class="footer">
+                <img  src="Images/networkFooter2.jpg " class="img-responsive"/>
+            </footer>
+        
     </form>
-    <script src="Scripts/bootstrap.js"></script>
-    <script src="Scripts/jquery-3.1.1.slim.js"></script>
+    
+    <script type="text/javascript" src="Scripts/libs/jquery/jquery.js"></script>
+    <script type="text/javascript"  src="Scripts/bootstrap.js"></script>
+    <!-- SmartMenus jQuery plugin -->
+    <script type="text/javascript" src="Scripts/jquery.smartmenus.js"></script>
+    <!-- SmartMenus jQuery init -->
+    <script src="Scripts/smartMenuInit.js"></script>
+    <script>
+      function initMap() {
+          var uluru = { lat: 35.793970, lng: 51.435633 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <%--<script>
+        function showHideMenu(setActive) {
+            if ($("#main-menu").hasClass('active'))
+            {
+                $("#main-menu").removeClass('active');
+                $("#main-menu").addClass('notActive');
+            }
+            else {
+                $("#main-menu").removeClass('notActive');
+                $("#main-menu").addClass('active');
+            }
+        }
+        $(function(){
+            $("#menuButton").click(function () {
+                showHideMenu(this.id);
+            });
+        });
+    </script>--%>
+    <script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByX_MCBJUSZjSj7AlQgcX-m_KAOwVulNg&callback=initMap">
+    </script>
 </body>
 </html>

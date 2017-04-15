@@ -14,6 +14,14 @@
   height: auto;
 }
 
+#menuButton{
+        visibility:hidden;
+    }
+.menuButtonSpec{
+    text-decoration-color:aqua;
+    margin:2px;
+}
+
 /* ------------------- Carousel Styling ------------------- */
 
 .carousel-inner {
@@ -107,16 +115,53 @@
         visibility:hidden;
         height:0.5em;
     }
+    #carouselContainer{
+        visibility:hidden;
+        height:0.5em;
+        display:none;
+    }
+    #menuButton{
+        visibility:visible;
+        float:right;
+        text-decoration-color:aqua;
+        margin:2px;
+    }
 }
 /*tablet*/
-@media only screen and (min-width:581px) and (max-width:629px)
+@media only screen and (min-width:581px) and (max-width:640px)
 {
+    #menuButton{
+        visibility:visible;
+        float:right;
+    }
+
     .carousel{
+        visibility:hidden;
+        height:0.5em;
+    }
+    #carouselContainer{
+        visibility:hidden;
+        height:0.5em;
+        display:none;
+    }
+}
+
+@media only screen and (min-width:641px)
+{
+    #menuButton{
+        visibility:hidden;
+    }
+}
+@media only screen and (min-width:641px) and (max-width:767px)
+{
+    #menuButton{
         visibility:visible;
     }
 
+    
+
 }
-@media only screen and (min-width:630px) and (max-width:991px)
+@media only screen and (min-width:768px) and (max-width:991px)
 {
     .carousel{
         visibility:visible;
@@ -171,6 +216,22 @@ div li{
     display:block;
     clear:both;
     height:3em;
+}
+/*----------------Menu Items-------------------*/
+#main-menu li{
+    text-align:right;
+    background-color:aquamarine;
+}
+/*----------------Placeholders-----------------*/
+.pl1{
+    display:block;
+    clear:both;
+    height:1em;
+}
+
+.pl2{
+    display:block;
+    height:1.5em;
 }
 
 

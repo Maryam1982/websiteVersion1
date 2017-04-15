@@ -15,7 +15,7 @@
 
 
     <link href="Content/HomePageStyleSheet.css" rel="stylesheet" />
-
+    <link href="Content/generalStyle.css" rel="stylesheet" />
     <script type="text/javascript" src="Scripts/libs/jquery/jquery.js"></script>
 
     <script type="text/javascript"  src="Scripts/bootstrap.js"></script>
@@ -24,37 +24,11 @@
     <script type="text/javascript" src="Scripts/jquery.smartmenus.js"></script>
 
     <script src="Scripts/CustomCarousel.js" type="text/javascript"></script>
-
+    
     <!-- SmartMenus jQuery init -->
-    <script type="text/javascript">
-	$(function() {
-		$('#main-menu').smartmenus({
-			subMenusSubOffsetX: 1,
-			subMenusSubOffsetY: -8
-		});
-	});
-	// SmartMenus mobile menu toggle button
-	$(function () {
-	    var $mainMenuState = $('#main-menu-state');
-	    if ($mainMenuState.length) {
-	        // animate mobile menu
-	        $mainMenuState.change(function (e) {
-	            var $menu = $('#main-menu');
-	            if (this.checked) {
-	                $menu.hide().slideDown(250, function () { $menu.css('display', ''); });
-	            } else {
-	                $menu.show().slideUp(250, function () { $menu.css('display', ''); });
-	            }
-	        });
-	        // hide mobile menu beforeunload
-	        $(window).bind('beforeunload unload', function () {
-	            if ($mainMenuState[0].checked) {
-	                $mainMenuState[0].click();
-	            }
-	        });
-	    }
-	});
-    </script>
+    <script src="Scripts/smartMenuInit.js"></script>
+
+    
 
 </head>
 <body>
@@ -62,65 +36,65 @@
     <nav class="main-nav" role="navigation">
 
         <h2 class="nav-brand"><a href="#">Brand</a></h2>
-
+        <span class="main-menu-btn" id="menuButton"></span>
         <!-- Menu definition -->
-        <ul id="main-menu" class="sm sm-blue">
-            <li ><a href="#">تماس با ما</a></li>
+        <ul id="main-menu" class="sm sm-blue sm-rtl ">
+            <li><a href="HomePage.html" id="mainPagelnk">صفحه اصلی</a></li>
+            <li >
+                <a href="#" id="networkServicelnk">خدمات شبکه</a>
+                <ul>
+                    <li ><a href="#">passive شبکه</a></li>
+                    <li ><a href="#">و نحوه ارتباط سطح شبکه Active</a></li>
+                    <li ><a href="#">مجازی سازی</a></li>
+                    <li ><a href="#">امنیت شبکه</a></li>
+                </ul>
+            </li>
+            <li >
+                <a href="#" id="softwareServicelnk">خدمات نرم افزاری</a>
+                <ul>
+                    <li ><a href="#">حضور و غیاب</a></li>
+                    <li ><a href="#">BI</a></li>
+                    <li ><a href="#">عملکرد پرسنل</a></li>
+                    <li ><a href="#">CRM</a></li>
+                    <li ><a href="#">اتوماسیون اداری</a></li>
+                    <li ><a href="#">نرم افزار جامع تولید</a></li>
+                    <li ><a href="#">ERP</a></li>
+                </ul>
+            </li>
             <li>
-                <a href="#">شرکت در یک نگاه</a>
+                <a href="#" id="productlnk">محصولات</a>
                 <ul>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">اهداف شرکت</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">نمودار سازمانی</a></li>
+                    <li ><a href="#">سرور</a></li>
+                    <li ><a href="#">سوئیچ</a></li>
+                    <li ><a href="#">Passive تجهیزات</a></li>
                 </ul>
-            </li> 
-            <li>
-                <a href="#">پشتیبانی</a>
-                <ul>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">شبکه</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">نرم افزار</a></li>
-                </ul>
-            </li>
-            
-            <li>
-                <a href="#">مقالات و آموزش</a>
-               
             </li>
             <li>
-                <a href="#">محصولات</a>
+                <a href="#" id="learninglnk">مقالات و آموزش</a>
+
+            </li>
+            <li>
+                <a href="#" id="supportlnk">پشتیبانی</a>
                 <ul>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">سرور</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">سوئیچ</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">Passive تجهیزات</a></li>
+                    <li ><a href="#">شبکه</a></li>
+                    <li ><a href="#">نرم افزار</a></li>
                 </ul>
             </li>
-            <li style="text-align:right;background-color:aquamarine">
-                <a href="#">خدمات نرم افزاری</a>
+            <li>
+                <a href="#" id="overviewlnk">شرکت در یک نگاه</a>
                 <ul>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">حضور و غیاب</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">BI</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">عملکرد پرسنل</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">CRM</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">اتوماسیون اداری</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">نرم افزار جامع تولید</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">ERP</a></li>
+                    <li ><a href="#">اهداف شرکت</a></li>
+                    <li ><a href="organizationalChart.aspx">نمودار سازمانی</a></li>
                 </ul>
             </li>
-            <li style="text-align:right;background-color:aquamarine">
-                <a href="#">خدمات شبکه</a>
-                <ul>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">passive شبکه</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">و نحوه ارتباط سطح شبکه Active</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">مجازی سازی</a></li>
-                    <li style="text-align:right;background-color:aquamarine"><a href="#">امنیت شبکه</a></li>
-                </ul>
-            </li>
-            <li style="text-align:right;background-color:aquamarine"><a href="#">صفحه اصلی</a></li>
+            <li ><a href="#" id="contactUslnk">تماس با ما</a></li> 
+            <li><a href="aboutUs.aspx" id="aboutUslnk">درباره ما</a></li>
         </ul>
     </nav>
   
-   <span style="display:block;clear:both;height:1em;"></span>
+   <span class="pl1"></span>
 
-    <div class="container ">
+    <div id="carouselContainer" class="container ">
 
         <div id="CarouselIntro" class="carousel slide">
             <ol class="carousel-indicators">
@@ -194,7 +168,7 @@
                 <div class="item" >
                     <div class="carousel-caption">
                         <h3 class="icon-container" data-animation="animated zoomInLeft">
-                            <span class="glyphicon glyphicon-sunglasses"></span>
+                            <span class="glyphicon glyphicon-check"></span>
                         </h3>
                         <h3 data-animation="animated flipInX">
                             تا پایان...
@@ -224,8 +198,8 @@
 
 
 
-    <span style="display:block;height:1.5em;"></span>
-    <div class="container">
+    <span class="pl2"></span>
+    <div class="container" id="bodyContainer">
         <div class="row">
             <div class="  col-xs-12 col-sm-6 col-md-3" >
                 <div id="firstColumn" class="inview  animated bounce content-first">
@@ -294,49 +268,29 @@
     </div>
     
 
-    <script src="js/demo.js"></script>
     <script src="Scripts/viewDetect.js"></script>
+    <script src="Scripts/animatedItems.js"></script>
     <script>
-        $(function () {
-
-            $('#firstColumn.inview').bind('inview', function (event, visible) {
-                if (visible) {
-                    $(this).addClass('animated bounce');
-                } else {
-                    $(this).removeClass('animated bounce');
-                }
-            });
-            
-            $('#secondColumn.inview').bind('inview', function (event, visible) {
-                if (visible) {
-                    setTimeout(function () {
-                        $('#secondColumn').addClass('animated bounce');
-                    }, 100);
-                } else {
-                    $(this).removeClass('animated bounce');
-                }
-            });
-
-            $('#thirdColumn.inview').bind('inview', function (event, visible) {
-                if (visible) {
-                    setTimeout(function () {
-                        $('#thirdColumn').addClass('animated bounce');
-                    }, 200);
-                } else {
-                    $(this).removeClass('animated bounce');
-                }
-            });
-
-            $('#fourthColumn.inview').bind('inview', function (event, visible) {
-                if (visible) {
-                    setTimeout(function () {
-                        $('#fourthColumn').addClass('animated bounce');
-                    }, 300);
-                } else {
-                    $(this).removeClass('animated bounce');
-                }
-            });
+        window.onresize = function () {
+            if (window.innerWidth > 767)
+                document.getElementById("main-menu").style.display = "block";
+            else 
+                document.getElementById("main-menu").style.display = "none";
+        }
+       
+    </script>
+    <script>
+        
+        $(function(){
+                $("#menuButton").click(function () {
+                    //$("#main-menu").toggle();
+                    if ($("#main-menu").css('display') === 'block')
+                        $("#main-menu").css('display', 'none');
+                    else
+                        $("#main-menu").css('display', 'block');
+                });
         });
+        
     </script>
 
     
